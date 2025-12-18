@@ -5,43 +5,108 @@
   <title>Aetora Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Aetora Solutions — Automation, Intelligence and Human Development." />
+
   <style>
+    :root {
+      --bg: #0f1115;
+      --fg: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #8b5cf6;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0f1115;
-      color: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    .container {
-      max-width: 720px;
-      padding: 40px;
-    }
-    h1 {
-      font-size: 2.8rem;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-    p {
-      font-size: 1.1rem;
-      color: #9ca3af;
+      background: var(--bg);
+      color: var(--fg);
       line-height: 1.6;
     }
+
+    section {
+      padding: 96px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 760px;
+      margin: 0 auto 24px;
+    }
+
     .tagline {
-      margin-top: 24px;
-      font-size: 0.95rem;
-      letter-spacing: 2px;
+      margin-top: 32px;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: #6b7280;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 48px;
+      margin-top: 64px;
+    }
+
+    .card {
+      border: 1px solid #1f2933;
+      border-radius: 16px;
+      padding: 32px;
+      background: linear-gradient(180deg, #111318, #0f1115);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.25rem;
+    }
+
+    footer {
+      padding: 64px 24px;
+      border-top: 1px solid #1f2933;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+      border-color: var(--fg);
     }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <!-- HERO -->
+  <section class="hero">
     <h1>Aetora Solutions</h1>
     <p>
       We design intelligent systems at the intersection of automation,
@@ -50,6 +115,67 @@
     <div class="tagline">
       Automation · Intelligence · Clarity
     </div>
-  </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section>
+    <h2>What We Do</h2>
+    <p>
+      Aetora Solutions operates where complexity demands clarity. We help
+      organizations and individuals structure processes, capabilities and
+      thinking frameworks supported by technology.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Automation & Process Intelligence</h3>
+        <p>
+          Design and automation of operational and strategic processes with
+          focus on efficiency, resilience and decision quality.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Education & Capability Building</h3>
+        <p>
+          Training programs in automation, applied AI and systems thinking,
+          tailored for teams, leaders and organizations.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Human Development</h3>
+        <p>
+          Productivity, focus and personal development grounded in clarity,
+          balance and sustainable performance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section>
+    <h2>Our Philosophy</h2>
+    <p>
+      We do not sell tools. We design systems of thinking.
+    </p>
+    <p>
+      Technology is the medium. Clarity is the outcome.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Based in Brazil. Operating globally.
+    </p>
+    <p>
+      <a href="mailto:contact@aetorasolutions.com">contact@aetorasolutions.com</a>
+    </p>
+    <p>
+      © Aetora Solutions
+    </p>
+  </footer>
+
 </body>
 </html>
